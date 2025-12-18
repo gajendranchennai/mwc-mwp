@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,31 +7,82 @@
     <title>My Wedding Planner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@19.0.0",
-        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-        "recharts": "https://esm.sh/recharts@3.6.0?external=react",
-        "lucide-react": "https://esm.sh/lucide-react@0.460.0?external=react",
-        "@google/genai": "https://esm.sh/@google/genai@1.33.0",
-        "jspdf": "https://esm.sh/jspdf@2.5.1",
-        "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2",
-        "jszip": "https://esm.sh/jszip@3.10.1"
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#fdf2f8',
+                100: '#fce7f3',
+                200: '#fbcfe8',
+                300: '#f9a8d4',
+                400: '#f472b6',
+                500: '#ec4899', // Main Logo Pink
+                600: '#db2777',
+                700: '#be185d',
+                800: '#9d174d',
+                900: '#831843',
+              },
+              gray: {
+                750: '#2d3748', // Custom dark grey for text
+              }
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'glow': '0 0 15px rgba(236, 72, 153, 0.3)',
+            }
+          }
+        }
       }
-    }
     </script>
-
     <style>
-      body { background-color: #f8fafc; }
-      .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+      body {
+        background-color: #f8fafc;
+      }
+      /* Custom scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #fbcfe8; 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #f472b6; 
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+      }
     </style>
-</head>
-<body>
-    <div id="root"></div>
 
-    <script type="module" src="./index.js"></script> 
-    </body>
-</html>
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2",
+    "jszip": "https://esm.sh/jszip@3.10.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-Ca7-Z3Sq.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
 </html>
