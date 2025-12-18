@@ -1,0 +1,5 @@
+{
+  "name": "My Wedding Planner",
+  "description": "An all-in-one smart wedding planning application featuring User Authentication, PDF Reports, AI-powered budget advice, inspiration generation, guest management, and a personalized assistant.",
+  "requestFramePermissions": []
+}
